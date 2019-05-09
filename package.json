@@ -1,0 +1,15 @@
+{
+  "name": "im_service",
+  "version": "1.0.0",
+  "description": "im_service",
+  "main": "app.js",
+  "author": {
+    "name": "Stefan Thiele",
+    "email": "stefan.thiele.berlin@gmail.com"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "jquery": "3.4.1",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
