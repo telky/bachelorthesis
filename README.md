@@ -1,2 +1,2 @@
 # bachelorthesis @ TU Berlin - Medieninformatik
-Analyse von Qualitätseigenschaften für Softwarearchitekturen am Beispiel von intermodalen Routing
+“Analysis of System Quality for Software Architectures on the example of Intermodal Routing”
