@@ -3,20 +3,31 @@
 //requires
 var osrm_client = require('./osrm_client');
 
-// swap array entries to right geo coordinates for OSRM
-/* var arrayLength = formattedArray.length;
-for (var i = arrayLength; i--;) {
-    var tmp = formattedArray[i][0];
-    formattedArray[i][0] = formattedArray[i][1];
-    formattedArray[i][1] = tmp; 
-}; */
+// predefined routes
+var routeA = require('./RoutesA.json');
+var routeB = require('./RoutesB.json');
 
-var nearestPoiToA = osrm_client.closestPOI([13.454132,52.557986]);
+// get all coordinates from A and put them into a new array
+var allRouteA = Object.values(routeA)[0];
+var aList = allRouteA.map(routeA => {
+    var x = [];
+    x = routeA.coordinates;
+    return x;
+});
+
+console.log('From A: ' + aList[0]);
+
+// TODO: für jede aList[i] den nächsten POI finden
+var findPoiToA = osrm_client.closestPOI(aList[0]);
+var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
+console.log('To POI: ' + nearestPoiToA);
 
 // callback: hier geht es dann weiter mit  der bvg
 function resultCallback (body) {
     console.log('BVG starts here');    
 };
 
-//osrm_client.routeToPoi('13.388860,52.517037','13.397634,52.529407', resultCallback);
-osrm_client.routeToPoi(nearestPoiToA,'13.397634,52.529407', resultCallback);
+// TODO: von jedem POI zum aList[i] routen
+osrm_client.routeToPoi(aList[0],nearestPoiToA, resultCallback);
+
+//osrm_client.routeToB('var_von_POI', 'var_zum_B', 'callback_was_danach_mit_der_route_getan_werden_soll');
