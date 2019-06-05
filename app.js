@@ -43,22 +43,17 @@ function resultRouteFromAToPoi (body) {
         return body.legs[0].steps;
     });
 
+    console.log(steps[0]);
+
+
     for (let i = 0; i < steps.length; i++) {
         var element = steps[i];
-        for (let j = 0; j < element[i].length; j++) {
-            var coords = element[j];
-            console.log(coords);
-            
-        }
-        // console.log(element);       
+        var name = element[i].name;
+        var coords = element[i].intersections[0].location;
+        console.log(name);        
+        console.log(coords);
     }
-
-    // console.log(steps);
-    
-    // console.log(test);
-    // console.log(test.legs);
-    // console.log(document.body);
-    // geojson.parse(body);
+    // geojson.parse();
 };
 
 // vbb routing and parse some geojson
