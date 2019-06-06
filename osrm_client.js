@@ -80,5 +80,5 @@ module.exports = {
     }
 };
 
-// bsp trip
-//http://demo.hafas.de/openapi/vbb-proxy/trip?originCoordLat=52.5638554;originCoordLong=13.4412406;destCoordLat=52.506191;destCoordLong=13.330536;format=json;accessId=bosch-Thiele-4035-900f-29403c078264
+// example of a trip
+// http://demo.hafas.de/openapi/vbb-proxy/trip?originCoordLat=52.5638554;originCoordLong=13.4412406;destCoordLat=52.506191;destCoordLong=13.330536;format=json;accessId=bosch-Thiele-4035-900f-29403c078264

@@ -3,6 +3,7 @@
 //requires
 var osrm_client = require('./osrm_client');
 var geojson = require('geojson');
+var fs = require('fs');
 
 // predefined routes
 var routeA = require('./RoutesA.json');
@@ -27,36 +28,79 @@ var bList = allRouteB.map(routeB => {
 var findPoiToA = osrm_client.closestPOI(aList[0]);
 var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
 var parsePoiToA = JSON.parse('[' + nearestPoiToA + ']');
-console.log(parsePoiToA);
+// console.log(parsePoiToA);
 
 // routing from Start to POI
 osrm_client.routeToPoi(aList[0],parsePoiToA, resultRouteFromAToPoi);
 
-// routing from POI to Destination and parse some geojson
+// routing from A to POI and parse some geojson
 function resultRouteFromAToPoi (body) {
 
     osrm_client.routeToB(aList[0],bList[0], resultRouteFromPoiToB);
 
     var test = Object.values(body)[1];
-
+    var arrayForParsingIntoGeoJSON = [];
     var steps = test.map(body => {
         return body.legs[0].steps;
     });
 
-    console.log(steps[0]);
-
-
+    steps = steps[0];
+    
+    // find all nodes 
     for (let i = 0; i < steps.length; i++) {
         var element = steps[i];
-        var name = element[i].name;
-        var coords = element[i].intersections[0].location;
-        console.log(name);        
-        console.log(coords);
+        
+        //name of each street
+        //var name = element.name;
+
+        var lng = element.intersections[0].location[0];
+        var lat = element.intersections[0].location[1];
+
+        arrayForParsingIntoGeoJSON.push([lng,lat]);
     }
-    // geojson.parse();
+
+    // POI
+    var lngPoint = findPoiToA.coordinates[0];
+    var latPoint = findPoiToA.coordinates[1];
+    console.log(lngPoint);
+    console.log(latPoint);
+
+    // generate object for parsing
+    var obj = [
+        {
+            x: latPoint,
+            y: lngPoint,
+            "marker-color": "#0ba802",
+            "marker-size": "medium",
+            "marker-symbol": "parking"
+        },
+        {
+            line: arrayForParsingIntoGeoJSON,
+            "stroke": "#000000",
+            "stroke-width": 5,
+            "stroke-opacity": 1,
+            "name": "driving"
+        }
+    ];
+
+    // parse into geojson
+    var x = geojson.parse(obj, {
+        'Point': ['x', 'y'],
+        'LineString': 'line'
+    });
+
+    var json = JSON.stringify(x);
+    fs.writeFile("./driving.json", json, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        };
+        console.log("File has been created");
+    });
+
 };
 
-// vbb routing and parse some geojson
+// vbb routing from POI to destination and parse some geojson
 function resultRouteFromPoiToB (body) {
     console.log('Routing vom POI zu B!');
     // console.log(body);   
