@@ -102,9 +102,20 @@ function resultRouteFromAToPoi (body) {
 
 // vbb routing from POI to destination and parse some geojson
 function resultRouteFromPoiToB (body) {
-    console.log('Routing vom POI zu B!');
-    // console.log(body);   
 
+    var test = Object.values(body)[1];
+
+    console.log(test);
+
+    console.log('Routing vom POI zu B!');
+    console.log(body);   
+
+    // trip[{vorschlag1},{vorschlag1},usw]
+    // {vorschlag1} -> "LegList": {{"Leg":[{step1},{step2},{step3},usw]}}
+    // if "Leg": {"type": "WALK"} 
+    //// "Leg": [{"Origin":{"lon":13.441238,"lat":52.563856},"Destination": {"lon": 13.445211,"lat": 52.56507}, "type": "WALK"}]
+    // if "Leg": {"Stops": {"Stop": []}, "name": "Bus X54"}
+    //// "Leg:" [{"Stops": {"Stop": [{"lon": 13.445211,"lat": 52.56507},{"lon": 13.440393,"lat": 52.568162},usw.]}}]
 };
 
 // geojson mapping

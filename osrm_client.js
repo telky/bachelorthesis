@@ -67,7 +67,16 @@ module.exports = {
         var destLong = 'destCoordLong=';
         var destLongCoords = toCoordinates[0];
         var accessId = ';format=json;accessId=bosch-Thiele-4035-900f-29403c078264';
-        request(baseUrl + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId, { json : true}, (err, res, body) => {
+        var passlist = 'passlist=1;';
+
+        // sets the departure date for the search (default: server date)
+        // var date = '20190611';
+
+        // sets the departure time for the search (default: server time)
+        // var time = '13:05:56';
+
+
+        request(baseUrl + passlist + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId, { json : true}, (err, res, body) => {
 
             if(err) {
                 return console.log('VBB ERROR:',err);
