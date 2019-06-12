@@ -6,22 +6,22 @@ var geojson = require('geojson');
 var fs = require('fs');
 
 // predefined routes
-var routeA = require('./RoutesA.json');
-var routeB = require('./RoutesB.json');
+var routeStart = require('./json/Routes_Start.json');
+var routeEnd = require('./json/Routes_End.json');
 
 // get all coordinates from A and put them into a new array
-var allRouteA = Object.values(routeA)[0];
-var aList = allRouteA.map(routeA => {
+var allRouteA = Object.values(routeStart)[0];
+var aList = allRouteA.map(routeStart => {
     var a = [];
-    a = routeA.coordinates;
+    a = routeStart.coordinates;
     return a;
 });
 
 // get all destination coordinates from B and put them into a new array
-var allRouteB = Object.values(routeB)[0];
-var bList = allRouteB.map(routeB => {
+var allRouteB = Object.values(routeEnd)[0];
+var bList = allRouteB.map(routeEnd => {
     var b = [];
-    b = routeB.coordinates;
+    b = routeEnd.coordinates;
     return b;
 });
 
@@ -38,10 +38,10 @@ function resultRouteFromAToPoi (body) {
 
     osrm_client.routeToB(aList[0],bList[0], resultRouteFromPoiToB);
 
-    var test = Object.values(body)[1];
+    var value = Object.values(body)[1];
     var arrayForParsingIntoGeoJSON = [];
-    var steps = test.map(body => {
-        return body.legs[0].steps;
+    var steps = value.map(value => {
+        return value.legs[0].steps;
     });
 
     steps = steps[0];
@@ -62,8 +62,6 @@ function resultRouteFromAToPoi (body) {
     // POI
     var lngPoint = findPoiToA.coordinates[0];
     var latPoint = findPoiToA.coordinates[1];
-    console.log(lngPoint);
-    console.log(latPoint);
 
     // generate object for parsing
     var obj = [
@@ -90,12 +88,11 @@ function resultRouteFromAToPoi (body) {
     });
 
     var json = JSON.stringify(x);
-    fs.writeFile("./driving.json", json, (err) => {
+    fs.writeFile("./json/Route1.json", json, (err) => {
         if (err) {
             console.error(err);
             return;
         };
-        console.log("File has been created");
     });
 
 };
@@ -103,19 +100,70 @@ function resultRouteFromAToPoi (body) {
 // vbb routing from POI to destination and parse some geojson
 function resultRouteFromPoiToB (body) {
 
-    var test = Object.values(body)[1];
+    var trip = Object.values(body)[0];
+    trip = trip[0].LegList.Leg;
 
-    console.log(test);
+    var arrayWithAllLegs = [];
 
-    console.log('Routing vom POI zu B!');
-    console.log(body);   
+    for (let i = 0; i < trip.length; i++) {
+        // const trips = trip[i];
+        
+        if (trip[i].type == "WALK") {
+                        
+            var lngOrigin = trip[i].Origin.lon;
+            var latOrigin = trip[i].Origin.lat;
 
-    // trip[{vorschlag1},{vorschlag1},usw]
-    // {vorschlag1} -> "LegList": {{"Leg":[{step1},{step2},{step3},usw]}}
-    // if "Leg": {"type": "WALK"} 
-    //// "Leg": [{"Origin":{"lon":13.441238,"lat":52.563856},"Destination": {"lon": 13.445211,"lat": 52.56507}, "type": "WALK"}]
-    // if "Leg": {"Stops": {"Stop": []}, "name": "Bus X54"}
-    //// "Leg:" [{"Stops": {"Stop": [{"lon": 13.445211,"lat": 52.56507},{"lon": 13.440393,"lat": 52.568162},usw.]}}]
+            arrayWithAllLegs.push([lngOrigin,latOrigin]); 
+            
+            var lngDestination = trip[i].Destination.lon;
+            var latDestination = trip[i].Destination.lat;
+
+            arrayWithAllLegs.push([lngDestination,latDestination]);
+
+        } else {
+            
+            var x = trip[i].Stops.Stop;
+
+            for (let j = 0; j < x.length; j++) {
+
+                var lngStop = x[j].lon;
+                var latStop = x[j].lat;
+
+                arrayWithAllLegs.push([lngStop,latStop]);
+                
+            }
+        }
+    }
+
+    // generate object for parsing
+    var obj = [
+        // {
+        //     line: array,
+        //     "marker-color": "#0ba802",
+        //     "marker-size": "medium",
+        //     "marker-symbol": "parking"
+        // },
+        {
+            line: arrayWithAllLegs,
+            "stroke": "#FF6767",
+            "stroke-width": 5,
+            "stroke-opacity": 1,
+            "name": "vbb"
+        }
+    ];
+
+    // parse into geojson
+    var x = geojson.parse(obj, {
+        'LineString': 'line'
+    });
+
+    var json = JSON.stringify(x);
+    fs.writeFile("./json/Route2.json", json, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        };
+    });
 };
 
 // geojson mapping

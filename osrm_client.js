@@ -5,7 +5,7 @@ const geolib = require('geolib');
 const request = require('request');
 
 // POI geojson from Berlin and Brandenburg
-var obj = require('./POI_20190507.json');
+ var obj = require('./json/POI_20190507.json');
 
 // get all coordinates from POI and put them into a new array
 var features = Object.values(obj)[4];
@@ -49,7 +49,6 @@ module.exports = {
             }
 
             callback(body);
-            //console.log(res);
 
         });
     },
@@ -83,7 +82,6 @@ module.exports = {
             }
             
             callback(body);
-            //console.log(res);
 
         });
     }
