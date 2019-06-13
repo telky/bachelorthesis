@@ -26,15 +26,12 @@ var bList = allRouteB.map(routeEnd => {
 });
 
 // variables have to be change for each route
-var routeStartCoord = aList[2];
-var routeEndCoord = bList[2];
+routeStartCoord = aList[8];
+routeEndCoord = bList[8];
 
 var findPoiToA = osrm_client.closestPOI(routeStartCoord);
 var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
 var parsePoiToA = JSON.parse('[' + nearestPoiToA + ']');
-console.log(routeStartCoord);
-console.log(routeEndCoord);
-console.log('next POI to A:' + parsePoiToA);
 
 // routing from Start to POI
 osrm_client.routeToPoi(routeStartCoord,parsePoiToA, resultRouteFromAToPoi);
@@ -71,9 +68,16 @@ function resultRouteFromAToPoi (body) {
     // generate object for parsing
     var obj = [
         {
+            x: routeStartCoord[1],
+            y: routeStartCoord[0],
+            "marker-color": "#000000",
+            "marker-size": "medium",
+            "marker-symbol": "circle"
+        },
+        {
             x: latPoint,
             y: lngPoint,
-            "marker-color": "#0ba802",
+            "marker-color": "#bfcdbe",
             "marker-size": "medium",
             "marker-symbol": "parking"
         },
@@ -88,6 +92,7 @@ function resultRouteFromAToPoi (body) {
 
     // parse into geojson
     var x = geojson.parse(obj, {
+        'Point': ['x', 'y'],
         'Point': ['x', 'y'],
         'LineString': 'line'
     });
@@ -143,12 +148,24 @@ function resultRouteFromPoiToB (body) {
     // generate object for parsing
     var obj = [
         {
-            line: arrayWithAllLegs
+            x: routeEndCoord[1],
+            y: routeEndCoord[0],
+            "marker-color": "#ea3232",
+            "marker-size": "medium",
+            "marker-symbol": "town"
+        },
+        {
+            line: arrayWithAllLegs,
+            "stroke": "#ea3232",
+            "stroke-width": 5,
+            "stroke-opacity": 1,
+            "name": "vbb"
         }
     ];
 
     // parse into geojson
     var x = geojson.parse(obj, {
+        'Point': ['x', 'y'],
         'LineString': 'line'
     });
 

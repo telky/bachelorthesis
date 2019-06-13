@@ -48,6 +48,7 @@ module.exports = {
                 return console.log('POI ERROR:', err);
             }
             
+            console.log('OSRM:', baseUrl + urlPath);
             callback(body);
 
         });
@@ -80,7 +81,7 @@ module.exports = {
             if(err) {
                 return console.log('VBB ERROR:',err);
             }
-            console.log(baseUrl + poly + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId);
+            console.log('VBB URL:', baseUrl + poly + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId);
             callback(body);
 
         });
