@@ -47,7 +47,7 @@ module.exports = {
             if(err) {
                 return console.log('POI ERROR:', err);
             }
-
+            
             callback(body);
 
         });
@@ -66,7 +66,7 @@ module.exports = {
         var destLong = 'destCoordLong=';
         var destLongCoords = toCoordinates[0];
         var accessId = ';format=json;accessId=bosch-Thiele-4035-900f-29403c078264';
-        var passlist = 'passlist=1;';
+        var poly = 'poly=1;'
 
         // sets the departure date for the search (default: server date)
         // var date = '20190611';
@@ -75,17 +75,14 @@ module.exports = {
         // var time = '13:05:56';
 
 
-        request(baseUrl + passlist + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId, { json : true}, (err, res, body) => {
+        request(baseUrl + poly + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId, { json : true}, (err, res, body) => {
 
             if(err) {
                 return console.log('VBB ERROR:',err);
             }
-            
+            console.log(baseUrl + poly + fromLat + fromLatCoords + ';' + fromLong + fromLongCoords + ';' + destLat + destLatCoords + ';' + destLong + destLongCoords + accessId);
             callback(body);
 
         });
     }
 };
-
-// example of a trip
-// http://demo.hafas.de/openapi/vbb-proxy/trip?originCoordLat=52.5638554;originCoordLong=13.4412406;destCoordLat=52.506191;destCoordLong=13.330536;format=json;accessId=bosch-Thiele-4035-900f-29403c078264

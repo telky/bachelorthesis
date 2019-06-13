@@ -25,18 +25,23 @@ var bList = allRouteB.map(routeEnd => {
     return b;
 });
 
-var findPoiToA = osrm_client.closestPOI(aList[0]);
+// variables have to be change for each route
+var routeStartCoord = aList[2];
+var routeEndCoord = bList[2];
+
+var findPoiToA = osrm_client.closestPOI(routeStartCoord);
 var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
 var parsePoiToA = JSON.parse('[' + nearestPoiToA + ']');
-// console.log(parsePoiToA);
+console.log(routeStartCoord);
+console.log(routeEndCoord);
+console.log('next POI to A:' + parsePoiToA);
 
 // routing from Start to POI
-osrm_client.routeToPoi(aList[0],parsePoiToA, resultRouteFromAToPoi);
-
+osrm_client.routeToPoi(routeStartCoord,parsePoiToA, resultRouteFromAToPoi);
 // routing from A to POI and parse some geojson
 function resultRouteFromAToPoi (body) {
 
-    osrm_client.routeToB(aList[0],bList[0], resultRouteFromPoiToB);
+    osrm_client.routeToB(parsePoiToA,routeEndCoord, resultRouteFromPoiToB);
 
     var value = Object.values(body)[1];
     var arrayForParsingIntoGeoJSON = [];
@@ -106,7 +111,6 @@ function resultRouteFromPoiToB (body) {
     var arrayWithAllLegs = [];
 
     for (let i = 0; i < trip.length; i++) {
-        // const trips = trip[i];
         
         if (trip[i].type == "WALK") {
                         
@@ -122,33 +126,24 @@ function resultRouteFromPoiToB (body) {
 
         } else {
             
-            var x = trip[i].Stops.Stop;
+            var x = trip[i].PolylineGroup.polylineDesc[0].crd;
 
             for (let j = 0; j < x.length; j++) {
 
-                var lngStop = x[j].lon;
-                var latStop = x[j].lat;
+                var spliced = x.splice(0,2);
+                var lngStop = spliced[0];
+                var latStop = spliced[1];
 
-                arrayWithAllLegs.push([lngStop,latStop]);
-                
+                arrayWithAllLegs.push([lngStop,latStop]);                    
             }
         }
+
     }
 
     // generate object for parsing
     var obj = [
-        // {
-        //     line: array,
-        //     "marker-color": "#0ba802",
-        //     "marker-size": "medium",
-        //     "marker-symbol": "parking"
-        // },
         {
-            line: arrayWithAllLegs,
-            "stroke": "#FF6767",
-            "stroke-width": 5,
-            "stroke-opacity": 1,
-            "name": "vbb"
+            line: arrayWithAllLegs
         }
     ];
 
@@ -157,13 +152,11 @@ function resultRouteFromPoiToB (body) {
         'LineString': 'line'
     });
 
-    var json = JSON.stringify(x);
-    fs.writeFile("./json/Route2.json", json, (err) => {
+    test = JSON.stringify(x);
+    fs.writeFile("./json/Route2.json", test, (err) => {
         if (err) {
             console.error(err);
             return;
         };
     });
 };
-
-// geojson mapping
