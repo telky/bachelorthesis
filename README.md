@@ -4,6 +4,13 @@ Bachelorthesis - Medieninformatik (Bachelor of Science)
 
 Stefan Thiele
 
+![Example](https://github.com/telky/bachelorthesis/blob/master/misc/example_route.png)
+
+________________________________________________________________________________________________________________________________________
+
+
+# Exposé
+
 ## Titel: Analyse von Qualitätseigenschaften für Softwarearchitekturen am Beispiel vom intermodalen Routing
 
 ### 1. Einleitung - Motivation 
