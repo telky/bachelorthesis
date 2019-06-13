@@ -3,9 +3,10 @@ Bachelorthesis - Medieninformatik (Bachelor of Science)
 [@TUBerlin](https://www.eecs.tu-berlin.de/menue/studium_und_lehre/studiengaenge/medieninformatik/medieninformatiktu_fu_hu_berlin) & [@Bosch](https://www.bosch.com/de/produkte-und-services/vernetzte-produkte-und-services/connected-mobility/)
 
 Stefan Thiele
+________________________________________________________________________________________________________________________________________
 
 ![Example](https://github.com/telky/bachelorthesis/blob/master/misc/example_route.png)
-
+Beispiel einer Route
 ________________________________________________________________________________________________________________________________________
 
 
