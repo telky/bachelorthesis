@@ -26,8 +26,8 @@ var bList = allRouteB.map(routeEnd => {
 });
 
 // variables have to be change for each route
-routeStartCoord = aList[8];
-routeEndCoord = bList[8];
+routeStartCoord = aList[4];
+routeEndCoord = bList[4];
 
 var findPoiToA = osrm_client.closestPOI(routeStartCoord);
 var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
@@ -35,6 +35,7 @@ var parsePoiToA = JSON.parse('[' + nearestPoiToA + ']');
 
 // routing from Start to POI
 osrm_client.routeToPoi(routeStartCoord,parsePoiToA, resultRouteFromAToPoi);
+
 // routing from A to POI and parse some geojson
 function resultRouteFromAToPoi (body) {
 
@@ -48,17 +49,21 @@ function resultRouteFromAToPoi (body) {
 
     steps = steps[0];
     
-    // find all nodes 
+    // find all geo data: long & lat
     for (let i = 0; i < steps.length; i++) {
-        var element = steps[i];
-        
-        //name of each street
-        //var name = element.name;
 
-        var lng = element.intersections[0].location[0];
-        var lat = element.intersections[0].location[1];
+        var element = steps[i].intersections;
 
-        arrayForParsingIntoGeoJSON.push([lng,lat]);
+        for (let o = 0; o < element.length; o++) {
+
+            if (element[o].location) {
+
+                var lng = element[o].location[0];
+                var lat = element[o].location[1];
+
+                arrayForParsingIntoGeoJSON.push([lng,lat]); 
+            };
+        }
     }
 
     // POI
@@ -105,7 +110,33 @@ function resultRouteFromAToPoi (body) {
         };
     });
 
+
+    // 2. beide dateien mergen und das man nur noch eine hat
+
+    // geo data processing for polyline request -> map matching
+    var convertPolyline = '';
+
+    for (let k = 0; k < arrayForParsingIntoGeoJSON.length; k++) {
+        if (k % 2 === 0) {
+            convertPolyline += arrayForParsingIntoGeoJSON[k] + ',';
+        } else {
+            convertPolyline += arrayForParsingIntoGeoJSON[k] + ';';
+        }
+    }
+
+    // converted polyline for map matching osrm
+    convertPolyline = convertPolyline.slice(0, -1);
+    convertPolyline.toString();
+
+    // necessary for map matching
+    // osrm_client.mapmatching(convertPolyline, mappolyline);
+
 };
+
+// // map matching for osrm
+// function mappolyline (body) {
+//     console.log(body);
+// }
 
 // vbb routing from POI to destination and parse some geojson
 function resultRouteFromPoiToB (body) {
