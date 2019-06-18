@@ -110,9 +110,6 @@ function resultRouteFromAToPoi (body) {
         };
     });
 
-
-    // 2. beide dateien mergen und das man nur noch eine hat
-
     // geo data processing for polyline request -> map matching
     var convertPolyline = '';
 
@@ -143,7 +140,6 @@ function resultRouteFromPoiToB (body) {
 
     var trip = Object.values(body)[0];
     trip = trip[0].LegList.Leg;
-
     var arrayWithAllLegs = [];
 
     for (let i = 0; i < trip.length; i++) {
@@ -206,5 +202,17 @@ function resultRouteFromPoiToB (body) {
             console.error(err);
             return;
         };
-    });
+    }); 
+};
+
+var path = './json/Route2.json';
+
+resultRouteFromPoiToB().then(successCallback, failureCallback);
+
+function successCallback(){
+    console.log('test');
+};
+
+function failureCallback(){
+    console.log('bla');
 };
