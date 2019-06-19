@@ -9,10 +9,8 @@
   },
   "dependencies": {
     "express": "4.16.4",
-    "fs": "0.0.1-security",
     "geojson": "^0.5.0",
     "geolib": "^2.0.24",
-    "jquery": "3.4.1",
     "request": "^2.88.0"
   }
 }

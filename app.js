@@ -26,8 +26,8 @@ var bList = allRouteB.map(routeEnd => {
 });
 
 // variables have to be change for each route
-routeStartCoord = aList[4];
-routeEndCoord = bList[4];
+routeStartCoord = aList[0];
+routeEndCoord = bList[0];
 
 var findPoiToA = osrm_client.closestPOI(routeStartCoord);
 var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
@@ -203,16 +203,4 @@ function resultRouteFromPoiToB (body) {
             return;
         };
     }); 
-};
-
-var path = './json/Route2.json';
-
-resultRouteFromPoiToB().then(successCallback, failureCallback);
-
-function successCallback(){
-    console.log('test');
-};
-
-function failureCallback(){
-    console.log('bla');
 };
