@@ -88,7 +88,7 @@ module.exports = {
         var destLatCoords = toCoordinates[1];
         var destLong = 'destCoordLong=';
         var destLongCoords = toCoordinates[0];
-        var accessId = ';format=json;accessId=bosch-Thiele-4035-900f-29403c078264';
+        var accessId = ';';
         var poly = 'poly=1;'
 
         // sets the departure date for the search (default: server date)
