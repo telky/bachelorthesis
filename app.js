@@ -102,7 +102,7 @@ function resultRouteFromAToPoi (body) {
         'LineString': 'line'
     });
 
-    var json = JSON.stringify(x);
+    json = JSON.stringify(x);
     fs.writeFile("./json/Route1.json", json, (err) => {
         if (err) {
             console.error(err);
@@ -196,8 +196,8 @@ function resultRouteFromPoiToB (body) {
         'LineString': 'line'
     });
 
-    test = JSON.stringify(x);
-    fs.writeFile("./json/Route2.json", test, (err) => {
+    json = JSON.stringify(x);
+    fs.writeFile("./json/Route2.json", json, (err) => {
         if (err) {
             console.error(err);
             return;
