@@ -33,7 +33,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.55798590427374%2C13.454132080078125&amp;toPlace=52.506191342034576%2C13.330535888671875&amp;time=8%3A50am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.65997%2C13.55915&amp;toPlace=52.47627%2C13.38589&amp;time=8%3A50am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -52,7 +52,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">/otp/routers/default/plan?fromPlace=52.54546056358299%2C13.366069793701172&amp;toPlace=53.53460237630518%2C13.40005874633789&amp;time=10%3A05am&amp;date=04-09-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">/otp/routers/default/plan?fromPlace=52.68829%2C13.27987&amp;toPlace=52.47627%2C13.38589&amp;time=10%3A05am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -71,7 +71,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.653855731276984%2C13.51869821548462&amp;toPlace=52.45423106566469%2C13.38907241821289&amp;time=8%3A50am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.68829%2C13.27987&amp;toPlace=52.51448%2C13.35019&amp;time=8%3A50am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -90,7 +90,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.52415927884915%2C13.73291015625&amp;toPlace=52.507027222951635%2C13.386154174804688&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.45479%2C13.15386&amp;toPlace=52.51448%2C13.35019&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -109,7 +109,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.41289089264018%2C13.76106262207031&amp;toPlace=52.507027222951635%2C13.386154174804688&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.45479%2C13.15386&amp;toPlace=52.52945%2C13.44418&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -128,7 +128,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.41289089264018%2C13.76106262207031&amp;toPlace=52.43633919389028%2C13.374481201171875&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.65369%2C13.51881&amp;toPlace=52.55720%2C13.42912&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -147,7 +147,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.35505433067742%2C13.258438110351562&amp;toPlace=52.43633919389028%2C13.374481201171875&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.66618%2C13.48954&amp;toPlace=52.60717%2C13.31981&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -166,7 +166,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.35505433067742%2C13.258438110351562&amp;toPlace=52.414984998054834%2C13.287277221679688&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.56322%2C13.41645&amp;toPlace=52.31567%2C13.27187&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -185,7 +185,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.43047828780893%2C13.092269897460938&amp;toPlace=52.43633919389028%2C13.487091064453123&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.51424%2C13.71497&amp;toPlace=52.47885%2C13.37641&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -204,7 +204,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.40912125231122%2C13.433532714843748&amp;toPlace=52.522905940278065%2C13.410186767578123&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.51424%2C13.71497&amp;toPlace=52.36569%2C13.52559&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -223,7 +223,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.44178076592579%2C13.3154296875&amp;toPlace=52.563190697297514%2C13.416774272918701&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.51424%2C13.71497&amp;toPlace=52.52306%2C13.19784&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -242,7 +242,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.44178076592579%2C13.3154296875&amp;toPlace=52.511624283857785%2C13.325042724609375&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.63779%2C13.19203&amp;toPlace=52.54237%2C13.45512&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -261,7 +261,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.480271148513935%2C13.699264526367188&amp;toPlace=52.55130616747367%2C13.333969116210938&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.58005%2C13.46354&amp;toPlace=52.54237%2C13.45512&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -280,7 +280,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.60805152239317%2C13.9361572265625&amp;toPlace=52.54838346285351%2C13.340835571289062&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.25480%2C13.93051&amp;toPlace=52.51308%2C13.32573&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -299,7 +299,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.67721472156448%2C13.596954345703125&amp;toPlace=52.515803012883595%2C13.401260375976562&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.71682%2C13.43868&amp;toPlace=52.51308%2C13.32573&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -318,7 +318,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.59303784115741%2C13.338775634765625&amp;toPlace=52.55047112887276%2C13.352508544921875&amp;time=10%3A18am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.38293%2C13.06459&amp;toPlace=52.45406%2C13.38774&amp;time=10%3A18am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -337,7 +337,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.84840052378115%2C13.79058837890625&amp;toPlace=52.50368360390624%2C13.554382324218748&amp;time=10%3A54am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.56325%2C13.41651&amp;toPlace=52.45406%2C13.38774&amp;time=10%3A54am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -356,7 +356,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.92711883428343%2C12.812805175781248&amp;toPlace=52.50368360390624%2C13.554382324218748&amp;time=10%3A54am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.60546%2C12.87606&amp;toPlace=52.45406%2C13.38774&amp;time=10%3A54am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -375,7 +375,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.698025582148965%2C13.075103759765625&amp;toPlace=52.4350833510599%2C14.357757568359373&amp;time=10%3A54am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.28075%2C12.88023&amp;toPlace=52.45406%2C13.38774&amp;time=10%3A54am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -394,7 +394,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.54546056358299%2C13.234405517578125&amp;toPlace=52.52207036136366%2C13.555755615234375&amp;time=10%3A54am&amp;date=04-10-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
+          <stringProp name="HTTPSampler.path">otp/routers/default/plan?fromPlace=52.43054%2C13.60236&amp;toPlace=52.52186%2C13.41353&amp;time=10%3A54am&amp;date=06-19-2019&amp;mode=CAR_PARK%2CWALK%2CTRANSIT&amp;maxWalkDistance=804.672&amp;arriveBy=false&amp;wheelchair=false&amp;locale=en</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
