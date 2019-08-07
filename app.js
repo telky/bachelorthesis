@@ -1,4 +1,6 @@
-// Bachelorthesis - Stefan Thiele @TUB
+// Bachelorthesis - Stefan Thiele @TUB & @RB
+
+console.time('MyTimer', 'Programm starts');
 
 //requires
 var osrm_client = require('./osrm_client');
@@ -26,8 +28,8 @@ var bList = allRouteB.map(routeEnd => {
 });
 
 // variables have to be change for each route
-routeStartCoord = aList[0];
-routeEndCoord = bList[0];
+routeStartCoord = aList[19];
+routeEndCoord = bList[19];
 
 var findPoiToA = osrm_client.closestPOI(routeStartCoord);
 var nearestPoiToA = findPoiToA.coordinates[0] + "," + findPoiToA.coordinates[1];
@@ -109,31 +111,7 @@ function resultRouteFromAToPoi (body) {
             return;
         };
     });
-
-    // geo data processing for polyline request -> map matching
-    var convertPolyline = '';
-
-    for (let k = 0; k < arrayForParsingIntoGeoJSON.length; k++) {
-        if (k % 2 === 0) {
-            convertPolyline += arrayForParsingIntoGeoJSON[k] + ',';
-        } else {
-            convertPolyline += arrayForParsingIntoGeoJSON[k] + ';';
-        }
-    }
-
-    // converted polyline for map matching osrm
-    convertPolyline = convertPolyline.slice(0, -1);
-    convertPolyline.toString();
-
-    // necessary for map matching
-    // osrm_client.mapmatching(convertPolyline, mappolyline);
-
 };
-
-// // map matching for osrm
-// function mappolyline (body) {
-//     console.log(body);
-// }
 
 // vbb routing from POI to destination and parse some geojson
 function resultRouteFromPoiToB (body) {
@@ -202,5 +180,7 @@ function resultRouteFromPoiToB (body) {
             console.error(err);
             return;
         };
-    }); 
+    });
+
+    console.timeEnd('MyTimer');
 };
